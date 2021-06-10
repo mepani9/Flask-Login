@@ -1,1 +1,9 @@
-# Flask-Login
+# Flask Login Page
+
+Requirements
+
+Flask==2.0.1
+Flask-MySQLdb==0.2.0
+ 
+ 
+
