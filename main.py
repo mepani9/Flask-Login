@@ -100,7 +100,7 @@ def home():
     # User is not loggedin redirect to login page
     return redirect(url_for('login'))
 
-#http://127.0.0.1:7000/profile - profile page, it has you details
+#http://127.0.0.1:7000/profile - profile page, it has your details
 @app.route('/profile')
 def profile():
     # will check if user is loggedin
