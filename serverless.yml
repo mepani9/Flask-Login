@@ -22,4 +22,4 @@ provider:
 functions:
     app:mysql-flask
       handler:wsgi.handler
-    events:
+      events:
