@@ -20,10 +20,9 @@ provider:
   region: us-east-1
 
 functions:
-    app:mysql-flask
-      handler:wsgi.handler
-     events:http:
-          path: {proxy+} 
-          method: any
-          authorizer: aws_iam
-          cors: true
+  app:mysql-flask
+    handler: wsgi.handler
+    events:
+      - http: ANY /
+      - http: 'ANY {proxy+}'
+          
