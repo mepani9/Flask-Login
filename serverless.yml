@@ -23,3 +23,5 @@ functions:
     app:mysql-flask
       handler:wsgi.handler
       events:
+      - http: ANY /
+      - http: 'ANY {proxy+}'
