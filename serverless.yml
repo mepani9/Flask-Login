@@ -22,8 +22,7 @@ provider:
 functions:
     app:mysql-flask
       handler:wsgi.handler
-     events:
-      - http:
+     events:http:
           path: {proxy+} 
           method: any
           authorizer: aws_iam
