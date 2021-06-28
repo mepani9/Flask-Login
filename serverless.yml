@@ -10,7 +10,7 @@ custom:
   wsgi: flask-api
   app: main.py
   packRequirements: false
-  pythonRequirements: flask-api
+  pythonRequirements: 
   dockerizePip: non-linux
 
 provider:
