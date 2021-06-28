@@ -22,7 +22,7 @@ provider:
 functions:
   api:mysql-flask
     handler:wsgi_handler.handler
-  events:
+events:
       -http:
           path:/
           method:ANY
