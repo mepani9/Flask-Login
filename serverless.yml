@@ -20,7 +20,7 @@ provider:
   region: us-east-1
 
 functions:
-  api:
+  api:mysql-flask
     handler: wsgi_handler.handler
     events:
       - http:
