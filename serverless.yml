@@ -7,8 +7,8 @@ plugins:
   - serverless-wsgi
 
 custom:
-  wsgi:
-    app: flask.api
+  wsgi: flask-api
+    app: main.py
     packRequirements: false
   pythonRequirements:
     dockerizePip: non-linux
