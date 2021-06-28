@@ -21,7 +21,7 @@ provider:
 
 functions:
   api:mysql-flask
-    handler: wsgi_handler.handler
+    handler:wsgi_handler.handler
     events:
       - http:
           path: /
