@@ -15,7 +15,7 @@ custom:
 
 provider:
   name: aws
-  runtime: python3.6
+  runtime: python3.8
   stage: dev
   region: us-east-1
 
@@ -30,6 +30,4 @@ functions:
           path: /{proxy+}
           method: ANY
         
-plugins:
-  - serverless-wsgi
-  - serverless-python-requirements          
+      
