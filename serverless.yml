@@ -20,9 +20,13 @@ provider:
   region: us-east-1
 
 functions:
-  app:mysql-flask
-    handler:wsgi.handler
+  api:
+    handler: wsgi_handler.handler
     events:
-      - http:ANY /
-        - http:'ANY {proxy+}'
+      - http:
+          path: /
+          method: ANY
+      - http:
+          path: /{proxy+}
+          method: ANY
           
