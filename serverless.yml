@@ -24,10 +24,10 @@ functions:
     handler:wsgi_handler.handler
     events:
       - http:
-          path: /
-          method: ANY
+          path:/
+          method:ANY
       - http:
-          path: /{proxy+}
-          method: ANY
+          path:/{proxy+}
+          method:ANY
         
       
