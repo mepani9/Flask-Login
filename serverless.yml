@@ -9,7 +9,7 @@ plugins:
 custom:
   wsgi: flask-api
   app: main.py
-    packRequirements: false
+  packRequirements: false
   pythonRequirements:
     dockerizePip: non-linux
 
