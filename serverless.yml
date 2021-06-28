@@ -23,10 +23,10 @@ functions:
   api:mysql-flask
     handler:wsgi_handler.handler
     events:
-      - http:
+      -http:
           path:/
           method:ANY
-      - http:
+      -http:
           path:/{proxy+}
           method:ANY
         
