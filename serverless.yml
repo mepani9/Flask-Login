@@ -1,6 +1,6 @@
 # serverless.yml
 
-service: login-page
+service: api
 
 plugins:
   - serverless-python-requirements
