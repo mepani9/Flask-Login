@@ -1,33 +1,27 @@
-# serverless.yml
+service: aws-python-flask-api
 
-service: login-page 
-
-plugins:
-  - serverless-python-requirements
-  - serverless-wsgi
+frameworkVersion: '2'
 
 custom:
-  wsgi: flask-api
-  app: flask-login
-  packRequirements: false
-  pythonRequirements: 
-  dockerizePip: non-linux
+  wsgi:
+    app: app.app
 
 provider:
   name: aws
   runtime: python3.8
-  stage: dev
-  region: us-east-1
+  lambdaHashingVersion: '20201221'
 
 functions:
-  api:mysql-flask
-    handler:wsgi_handler.handler
-events:
-  - http:
-    path: /
-    method: ANY
-  - http:
-    path: /{proxy+}
-    method: ANY
-        
-      
+  api:
+    handler: wsgi_handler.handler
+    events:
+      - http:
+          path: /
+          method: ANY
+      - http:
+          path: /{proxy+}
+          method: ANY
+
+plugins:
+  - serverless-wsgi
+  - serverless-python-requirements
